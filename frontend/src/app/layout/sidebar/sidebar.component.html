@@ -1,0 +1,28 @@
+<div class="sidebar">
+  <h2>EMS</h2>
+
+  <ul>
+    <a mat-list-item routerLink="/departments">
+  <mat-icon>apartment</mat-icon>
+  <span>Departments</span>
+</a>
+
+    <!-- Admin -->
+    <ng-container *ngIf="role === 'Admin'">
+      <li routerLink="/employees">Employees</li>
+      <li routerLink="/departments">Departments</li>
+      <li routerLink="/designations">Designations</li>
+    </ng-container>
+
+    <!-- HR -->
+    <ng-container *ngIf="role === 'HR'">
+      <li routerLink="/employees">Employees</li>
+    </ng-container>
+
+    <!-- Employee -->
+    <ng-container *ngIf="role === 'Employee'">
+      <li routerLink="/employees">My Profile</li>
+    </ng-container>
+
+  </ul>
+</div>

@@ -1,0 +1,15 @@
+<h2 mat-dialog-title>Add Department</h2>
+
+<div mat-dialog-content>
+
+  <mat-form-field appearance="outline" style="width:100%">
+    <mat-label>Department Name</mat-label>
+    <input matInput [(ngModel)]="departmentName">
+  </mat-form-field>
+
+</div>
+
+<div mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-raised-button color="primary" (click)="save()">Save</button>
+</div>
